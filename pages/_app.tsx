@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import type { AppProps } from "next/app";
-import "@public/styles/globals.css";
-import { Provider } from "@/public/stores";
+import "@/styles/globals.css";
+import { Provider } from "@/stores";
 export default function App({ Component, pageProps }: AppProps) {
   const [showChild, setShowChild] = useState(false);
 
@@ -22,6 +22,6 @@ export default function App({ Component, pageProps }: AppProps) {
           <Component {...pageProps} />
         </main>
       </Provider>
-    );
+    )
   }
 }
